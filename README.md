@@ -128,6 +128,39 @@ TWILIO_PHONE_NUMBER=+1234567890
 
 The system uses real APIs when configured, or mock data for demonstration.
 
+## 🧪 Testing
+
+### Running Tests
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run with coverage
+npm run test:coverage
+```
+
+### Test Coverage
+- **Activities Tests**: Business logic validation
+  - Traffic data fetching and processing
+  - Notification generation and delivery
+  - Event logging and error handling
+
+- **Component Tests**: UI functionality
+  - TrafficForm: Form validation and submission
+  - TrafficStatus: Status display and state management
+
+- **Workflow Tests**: Temporal workflow execution
+  - Basic workflow lifecycle
+  - Timeout and error handling
+  - Simplified integration scenarios
+
+- **Integration Tests**: End-to-end flows
+  - Complete workflow execution
+  - System integration validation
+
 ## 🛠️ Error Handling
 
 - **Google Routes**: Falls back to mock traffic data

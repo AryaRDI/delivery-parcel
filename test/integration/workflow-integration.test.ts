@@ -59,7 +59,7 @@ describe('Workflow Integration Tests', () => {
       const result = await Promise.race([
         handle.result(),
         new Promise((_, reject) => 
-          setTimeout(() => reject(new Error('Integration test timeout')), 10000)
+          setTimeout(() => reject(new Error('Integration test timeout')), 1000)
         )
       ]) as any;
 
@@ -72,7 +72,7 @@ describe('Workflow Integration Tests', () => {
 
     worker.shutdown();
     await runPromise;
-  }, 15000);
+  }, 1500);
 
   it('should handle basic workflow lifecycle', async () => {
     const client = testEnv.client;
@@ -92,7 +92,7 @@ describe('Workflow Integration Tests', () => {
       await Promise.race([
         handle.result(),
         new Promise((_, reject) => 
-          setTimeout(() => reject(new Error('Integration test timeout')), 8000)
+          setTimeout(() => reject(new Error('Integration test timeout')), 1000)
         )
       ]);
     } catch (error) {
@@ -101,5 +101,5 @@ describe('Workflow Integration Tests', () => {
 
     worker.shutdown();
     await runPromise;
-  }, 15000);
+  }, 1500);
 }); 
