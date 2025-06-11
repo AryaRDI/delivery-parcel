@@ -36,10 +36,11 @@ export default function TrafficForm({
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-6">
           <div className="group">
-            <label className="block text-sm font-semibold text-slate-700 mb-2">
+            <label htmlFor="routeId" className="block text-sm font-semibold text-slate-700 mb-2">
               Route ID <span className="text-red-500">*</span>
             </label>
             <input
+              id="routeId"
               type="text"
               value={trafficRoute.routeId}
               onChange={(e) => setTrafficRoute({ ...trafficRoute, routeId: e.target.value })}
@@ -53,10 +54,11 @@ export default function TrafficForm({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="group">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="origin" className="block text-sm font-semibold text-slate-700 mb-2">
                 Origin Address <span className="text-red-500">*</span>
               </label>
               <input
+                id="origin"
                 type="text"
                 value={trafficRoute.origin}
                 onChange={(e) => setTrafficRoute({ ...trafficRoute, origin: e.target.value })}
@@ -69,10 +71,11 @@ export default function TrafficForm({
             </div>
 
             <div className="group">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="destination" className="block text-sm font-semibold text-slate-700 mb-2">
                 Destination Address <span className="text-red-500">*</span>
               </label>
               <input
+                id="destination"
                 type="text"
                 value={trafficRoute.destination}
                 onChange={(e) => setTrafficRoute({ ...trafficRoute, destination: e.target.value })}
@@ -87,10 +90,11 @@ export default function TrafficForm({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="group">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="customerEmail" className="block text-sm font-semibold text-slate-700 mb-2">
                 Customer Email <span className="text-red-500">*</span>
               </label>
               <input
+                id="customerEmail"
                 type="email"
                 value={trafficRoute.customerEmail}
                 onChange={(e) => setTrafficRoute({ ...trafficRoute, customerEmail: e.target.value })}
@@ -103,10 +107,11 @@ export default function TrafficForm({
             </div>
 
             <div className="group">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="customerPhone" className="block text-sm font-semibold text-slate-700 mb-2">
                 Customer Phone <span className="text-slate-400">(optional)</span>
               </label>
               <input
+                id="customerPhone"
                 type="tel"
                 value={trafficRoute.customerPhone}
                 onChange={(e) => setTrafficRoute({ ...trafficRoute, customerPhone: e.target.value })}
@@ -120,10 +125,11 @@ export default function TrafficForm({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="group">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="estimatedDuration" className="block text-sm font-semibold text-slate-700 mb-2">
                 Estimated Duration (minutes)
               </label>
               <input
+                id="estimatedDuration"
                 type="number"
                 value={trafficRoute.estimatedDurationMinutes}
                 onChange={(e) => setTrafficRoute({ ...trafficRoute, estimatedDurationMinutes: parseInt(e.target.value) })}
@@ -135,10 +141,11 @@ export default function TrafficForm({
             </div>
 
             <div className="group">
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label htmlFor="delayThreshold" className="block text-sm font-semibold text-slate-700 mb-2">
                 Delay Threshold (minutes)
               </label>
               <input
+                id="delayThreshold"
                 type="number"
                 value={trafficRoute.delayThresholdMinutes}
                 onChange={(e) => setTrafficRoute({ ...trafficRoute, delayThresholdMinutes: parseInt(e.target.value) })}

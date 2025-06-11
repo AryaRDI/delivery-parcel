@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { OpenAIRequest, OpenAIResponse } from '../types';
+import { OpenAIRequest, OpenAIResponse } from '../../types';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '';
 
